@@ -5,7 +5,7 @@ use Swoole\Http\Response;
 use Swoole\Http\Server;
 
 function respond(Response $response, int $statusCode = 200, ?array $return = null) {
-	if ($response !== null) {
+	if ($return !== null) {
 		$response->write(json_encode($return));
 	}
 
